@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "./build",
+    "jsx": "react",
+    "allowJs": false,
+    "moduleResolution": "node",
+    "baseUrl": "types",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node"]
+  },
+  "exclude": [
+    "node_modules", "Documentation"
+  ], 
+  "compileOnSave": true
+}

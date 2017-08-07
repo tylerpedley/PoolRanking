@@ -1,0 +1,31 @@
+image: node:7.10.0
+
+stages:
+  - install
+  - test
+  - build
+
+install:
+  stage: install
+  script: npm install
+  artifacts:
+    paths:
+      - node_modules/
+      - public/
+      - src/
+      - package.json
+      - webpack.config.js
+      - tsconfig.json
+      - tslint.json
+        
+tslint:
+  stage: test
+  script: node_modules/.bin/tslint --project tsconfig.json
+
+mocha:
+  stage: test
+  script: ./node_modules/.bin/mocha-webpack
+  
+build:
+  stage: build
+  script: node_modules/.bin/tsc

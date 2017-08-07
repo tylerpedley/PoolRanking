@@ -1,0 +1,7 @@
+--colors
+--webpack-config tests/webpack.config.js
+--require source-map-support/register
+--require tests/helpers/setup.js
+tests/**/*.{ts,tsx}
+--recursive
+--exit
